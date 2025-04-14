@@ -1,6 +1,8 @@
-html {
+/* CSS reset */
+@import url('./reset.css');
+
+html, body {
   width: 100vw;
-  max-width: 100vw;
 }
 
 .alert-bar {
@@ -18,13 +20,11 @@ html {
 }
 
 body {
-  width: 100vw;
   background-color: #ffd600;
   font-family: Montserrat, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  margin: 0;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
@@ -32,31 +32,78 @@ body {
   justify-content: center;
   height: auto;
   overflow-x: hidden;
-  /* Impede a rolagem lateral */
 }
 
 main {
   width: 100vw;
-  margin: 20;
-  padding-top: 20px;
-}
-
-
-.container {
   display: flex;
-  flex-wrap: wrap;
-  /* Se necessário, permite quebra de linha */
-  justify-content: space-between;
-  align-items: flex-start;
-  align-items: center;
-
+  flex-direction: column;
 }
 
-.texto {
-  flex: 1;
-  /* O parágrafo ocupa o restante da largura */
-  min-width: 300px;
-  max-width: 900px;
+h1 {
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 20px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #cc0000;
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+section#intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem 10rem 5rem;
+  gap: 4rem;
+  
+  div#text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    gap: 2vh;
+
+    button {
+      width: 80%;
+    }
+  }  
+  
+  div#video {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 55%;
+
+    iframe {
+      width: 100%;
+      border: none;
+    }
+  }
 }
 
 .highlight {
@@ -98,31 +145,6 @@ iframe {
   height: 315px;
   border-radius: 10px;
 }
-
-button {
-  background-color: #ff0000;
-  /* Vermelho igual ao alerta */
-  color: #fff;
-  /* Texto branco */
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-  text-transform: none;
-  /* não Deixa o texto todo em maiúsculas */
-  letter-spacing: 1px;
-  /* Aumenta o espaçamento entre as letras */
-  transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-  background-color: #cc0000;
-  /* Tom mais escuro ao passar o mouse */
-}
-
 
 /* Código CSS já existente */
 
