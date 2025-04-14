@@ -1,0 +1,358 @@
+html {
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.alert-bar {
+  background-color: #ff0000;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+body {
+  width: 100vw;
+  background-color: #ffd600;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  overflow-x: hidden;
+  /* Impede a rolagem lateral */
+}
+
+main {
+  width: 100vw;
+  margin: 20;
+  padding-top: 20px;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Se necessário, permite quebra de linha */
+  justify-content: space-between;
+  align-items: flex-start;
+  align-items: center;
+
+}
+
+.texto {
+  flex: 1;
+  /* O parágrafo ocupa o restante da largura */
+  min-width: 300px;
+  max-width: 900px;
+}
+
+.highlight {
+  background-color: #fff;
+  /* Destaca com fundo amarelo */
+  color: #000;
+  /* Texto preto para contraste */
+  font-weight: bold;
+  /* Deixa o texto mais forte */
+  text-align: justify;
+  padding: 2px 4px;
+  /* Adiciona espaçamento interno */
+  display: inline-block;
+  /* Mantém o ajuste correto dentro da linha */
+
+
+}
+
+.video {
+  flex: 1;
+  /* O vídeo ocupa o espaço restante */
+  min-width: 300px;
+  max-width: 600px;
+  /* Garante que o vídeo não ultrapasse 50% da tela */
+  display: flex;
+  justify-content: center;
+}
+
+.video-content {
+  flex: 1;
+  /* Ocupa 50% do espaço */
+  display: flex;
+  justify-content: flex-end;
+}
+
+iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 10px;
+}
+
+button {
+  background-color: #ff0000;
+  /* Vermelho igual ao alerta */
+  color: #fff;
+  /* Texto branco */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  text-transform: none;
+  /* não Deixa o texto todo em maiúsculas */
+  letter-spacing: 1px;
+  /* Aumenta o espaçamento entre as letras */
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #cc0000;
+  /* Tom mais escuro ao passar o mouse */
+}
+
+
+/* Código CSS já existente */
+
+/* Novo bloco CSS */
+.novo-bloco {
+  background-color: #f0f0f0;
+  /* Novo fundo (um azul mais profundo) */
+  color: black;
+  /* Texto branco */
+  padding: 30px;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  margin-top: 50px;
+  /* Dá um espaço entre o conteúdo anterior e o novo bloco */
+  text-align: center;
+  /* Centraliza o texto */
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  /* Espaçamento entre as colunas */
+  max-width: 80%;
+  /* Ajuste para não ocupar toda a tela */
+  margin: 0 auto;
+  /* Centraliza o bloco */
+  flex-wrap: wrap;
+}
+
+.novo-bloco h2 {
+  width: 45%;
+  font-size: 50px;
+  margin-left: 200px;
+  margin-bottom: 10px;
+}
+
+.novo-bloco p {
+  width: 45%;
+  font-size: 18px;
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+.novo-bloco button {
+  background-color: #ff5722;
+  /* Cor vibrante para o botão */
+  color: white;
+  margin-left: 200px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.novo-bloco button:hover {
+  background-color: #e64a19;
+  /* Cor mais escura quando passa o mouse */
+}
+
+.bloco-3 {
+  background-color: #f9f9f9;
+  padding: 60px 60px;
+  text-align: center;
+}
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.benefit {
+  width: 30%;
+  padding: 30px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.benefit img {
+  width: 180px;
+  /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  /* Mantém a proporção original */
+  border-radius: 40%;
+  /* Deixa a imagem redonda */
+  display: block;
+  /* Evita espaçamentos indesejados */
+  margin: 0 auto 10px;
+  /* Centraliza a imagem e adiciona espaço abaixo */
+}
+
+
+.benefit h3 {
+  margin-top: 15px;
+  color: #ff7700;
+}
+
+.bloco-4 {
+  width: 100%;
+  background-color: #ff7700;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.bloco-4 h2 {
+  font-size: 2rem;
+}
+
+.bloco-4 p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.bloco-4 button {
+  background-color: white;
+  color: #ff7700;
+  padding: 12px 20px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.bloco-4 button:hover {
+  background-color: #f8f9fa;
+}
+
+
+
+.faq {
+  background-color: #f0f0f0;
+  /* Fundo cinza claro */
+  width: 100%;
+  /* Ocupa toda a largura da tela */
+  padding: 50px 10%;
+  /* Espaçamento interno */
+  box-sizing: border-box;
+  /* Garante que padding não aumente a largura total */
+}
+
+.faq h2 {
+  text-align: center;
+  /* Centraliza o título */
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  max-width: 800px;
+  /* Mantém os itens dentro de um limite confortável */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  border: none;
+  background-color: #ff0000;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.faq-answer {
+  display: none;
+  /* Oculta as respostas por padrão */
+  padding: 10px;
+  background-color: #fff;
+  border-left: 4px solid #ff0000;
+  margin-top: 5px;
+}
+
+.faq button {
+  background-color: #dfe6e9;
+  /* Tom gelo */
+  color: #333;
+  /* Cinza escuro para o texto */
+  border: none;
+  /* Cinza médio */
+}
+
+.faq button:hover {
+  background-color: #b2bec3 !important;
+  /* Tom mais escuro de gelo */
+  color: #222 !important;
+  /* Texto mais escuro */
+  border-color: none;
+  /* Borda mais escura */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+
+
+footer {
+  background-color: #000;
+  /* Fundo preto */
+  color: #fff;
+  /* Texto branco */
+  width: 100%;
+  padding: 200px;
+  /* Espaço interno */
+  font-size: 16px;
+  /* Tamanho do texto */
+  margin: 0px;
+  position: relative;
+}
+
+.novo-bloco,
+.faq,
+footer {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.novo-bloco .highlight {
+  background-color: #ffd600;
+  /* Amarelo igual ao fundo */
+  color: black;
+  /* Mantém o texto legível */
+  font-weight: bold;
+  padding: 1px 1px;
+  display: inline-block;
+}
