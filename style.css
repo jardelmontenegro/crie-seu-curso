@@ -5,8 +5,22 @@ html, body {
   width: 100vw;
 }
 
+:root {
+  --primary-color: #ff0000;
+  --secondary-color: #ffd600;
+  --text-color: #333;
+  --background-color: #f0f0f0;
+  --highlight-color: #fff;
+
+  /* Spacing */
+  --section-padding: 3rem 10rem 5rem;
+  --section-gap: 4rem;
+  --text-block-spacing: 2vh;
+
+}
+
 .alert-bar {
-  background-color: #ff0000;
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -20,11 +34,11 @@ html, body {
 }
 
 body {
-  background-color: #ffd600;
+  background-color: var(--secondary-color);
   font-family: Montserrat, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
+  color: var(--text-color);
   padding-top: 50px;
   display: flex;
   flex-direction: column;
@@ -51,8 +65,6 @@ p {
 }
 
 button {
-  background-color: #ff0000;
-  color: #fff;
   border: none;
   padding: 20px 30px;
   font-size: 16px;
@@ -62,31 +74,30 @@ button {
   font-weight: bold;
   text-transform: none;
   letter-spacing: 1px;
-  transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
-  background-color: #cc0000;
-}
-
-button:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.highlight {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  text-align: justify;
+  padding: 2px 4px;
+  display: inline-block;
 }
 
 section#intro {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 3rem 10rem 5rem;
-  gap: 4rem;
-  
+  padding: var(--section-padding);
+  gap: var(--section-gap);  
+
   div#text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 45%;
-    gap: 2vh;
+    gap: var(--text-block-spacing);
 
     button {
       width: 80%;
@@ -98,111 +109,78 @@ section#intro {
     align-items: center;
     justify-content: flex-end;
     width: 55%;
+    aspect-ratio: 16 / 9;
 
     iframe {
       width: 100%;
+      height: 100%;
       border: none;
+      border-radius: 10px;
     }
+  }
+
+  button {
+    background-color: var(--primary-color);
+    color: var(--highlight-color);
+    color: #fff;
+    border: none;
+    padding: 20px 30px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #cc0000;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 }
 
-.highlight {
-  background-color: #fff;
-  /* Destaca com fundo amarelo */
-  color: #000;
-  /* Texto preto para contraste */
-  font-weight: bold;
-  /* Deixa o texto mais forte */
-  text-align: justify;
-  padding: 2px 4px;
-  /* Adiciona espaçamento interno */
-  display: inline-block;
-  /* Mantém o ajuste correto dentro da linha */
-
-
-}
-
-.video {
-  flex: 1;
-  /* O vídeo ocupa o espaço restante */
-  min-width: 300px;
-  max-width: 600px;
-  /* Garante que o vídeo não ultrapasse 50% da tela */
-  display: flex;
-  justify-content: center;
-}
-
-.video-content {
-  flex: 1;
-  /* Ocupa 50% do espaço */
-  display: flex;
-  justify-content: flex-end;
-}
-
-iframe {
+#projeto {
   width: 100%;
-  max-width: 560px;
-  height: 315px;
-  border-radius: 10px;
-}
-
-/* Código CSS já existente */
-
-/* Novo bloco CSS */
-.novo-bloco {
   background-color: #f0f0f0;
-  /* Novo fundo (um azul mais profundo) */
   color: black;
-  /* Texto branco */
-  padding: 30px;
-  width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
+  padding: var(--section-padding);
   margin-top: 50px;
-  /* Dá um espaço entre o conteúdo anterior e o novo bloco */
-  text-align: center;
-  /* Centraliza o texto */
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  /* Espaçamento entre as colunas */
-  max-width: 80%;
-  /* Ajuste para não ocupar toda a tela */
-  margin: 0 auto;
-  /* Centraliza o bloco */
-  flex-wrap: wrap;
-}
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--section-gap);
 
-.novo-bloco h2 {
-  width: 45%;
-  font-size: 50px;
-  margin-left: 200px;
-  margin-bottom: 10px;
-}
+  div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--text-block-spacing);
+  }
 
-.novo-bloco p {
-  width: 45%;
-  font-size: 18px;
-  margin-left: 200px;
-  margin-bottom: 20px;
-}
+  div:nth-child(2) {
+    width: fit-content;
+    justify-content: center;
 
-.novo-bloco button {
-  background-color: #ff5722;
-  /* Cor vibrante para o botão */
-  color: white;
-  margin-left: 200px;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    p {
+      width: fit-content;
+      display: inline-block;
+    }
+  }
+  
+  button {
+    background-color: #ff5722;
+    width: 80%;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+  }
 
-.novo-bloco button:hover {
-  background-color: #e64a19;
-  /* Cor mais escura quando passa o mouse */
+  button:hover {
+    background-color: #e64a19;
+  }
+
+  button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .bloco-3 {
@@ -359,14 +337,6 @@ footer {
   /* Tamanho do texto */
   margin: 0px;
   position: relative;
-}
-
-.novo-bloco,
-.faq,
-footer {
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden;
 }
 
 .novo-bloco .highlight {
